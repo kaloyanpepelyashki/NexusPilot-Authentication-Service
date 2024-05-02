@@ -1,0 +1,6 @@
+@NexusPilot_Auth_Service_HostAddress = http://localhost:5191
+
+GET {{NexusPilot_Auth_Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
