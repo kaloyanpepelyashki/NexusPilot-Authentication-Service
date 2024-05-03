@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NexusPilot-Auth-Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de98c4c10da6da0639ead231921570ddd756e122")]
 [assembly: System.Reflection.AssemblyProductAttribute("NexusPilot-Auth-Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NexusPilot-Auth-Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

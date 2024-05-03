@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "NexusPilot_Auth_Service.Controllers.AuthController",
+    "Method": "SignIn",
+    "RelativePath": "api/Auth/signin",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signInObject",
+        "Type": "NexusPilot_Auth_Service.Controllers.AuthController\u002BSignInObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NexusPilot_Auth_Service.Controllers.AuthController",
+    "Method": "SignUp",
+    "RelativePath": "api/Auth/signup",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "signUpObject",
+        "Type": "NexusPilot_Auth_Service.Controllers.AuthController\u002BSignUpObject",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

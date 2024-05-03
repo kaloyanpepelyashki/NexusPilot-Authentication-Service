@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "DPtJYTNgfjDC/dlmgsAGHh1F6lAxNpb5Rx3XmiWom1g=",
+  "Source": "NexusPilot-Auth-Service",
+  "BasePath": "_content/NexusPilot-Auth-Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
