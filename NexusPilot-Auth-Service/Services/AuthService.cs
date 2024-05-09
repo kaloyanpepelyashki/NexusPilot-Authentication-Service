@@ -5,6 +5,7 @@ using Supabase.Gotrue;
 
 namespace NexusPilot_Auth_Service.Services
 {
+    /*This class is the entry point to handle all authentication operations. Provides methods for sign-in and sign-up of users*/
     public class AuthService
     {
         private static AuthService _instance;
@@ -27,7 +28,6 @@ namespace NexusPilot_Auth_Service.Services
             return _instance;
         }
 
-        //If the debug of Supabase doesn't work, re-write the logic to create accounts in user_accounts table, differently.
         public async Task<bool> SignUp(string nickName, string bio, string role, string email, string password)
         {
             try
@@ -61,7 +61,7 @@ namespace NexusPilot_Auth_Service.Services
             }
         }
 
-        public async Task<bool> SignIn(string email, string password)
+        public async Task<(bool isSuccess, UserReturnObject userObject)> SignIn(string email, string password)
         {
             try
             {
@@ -69,7 +69,12 @@ namespace NexusPilot_Auth_Service.Services
 
                 if(session != null)
                 {
-                    return true;
+                    if(session.User != null)
+                    {
+                        return (true, new UserReturnObject { Email = session.User.Email, Id = session.User.Id });
+                    }
+
+                    return (false, new UserReturnObject());
                 } else
                 {
                     throw new AuthException("Error signing user in.");
@@ -78,7 +83,7 @@ namespace NexusPilot_Auth_Service.Services
             } catch(Exception e)
             {
 
-                throw new Exception($"Error signing user in: {e}");
+                throw;
             }
         }
 

@@ -11,8 +11,10 @@ namespace NexusPilot_Auth_Service.Controllers
     public class AuthController : ControllerBase
     {
         private AuthService _authService;
-        public AuthController()
-        {
+        private JwtIssuerService _jwtIssuerService;
+        public AuthController(JwtIssuerService jwtIssuerService)
+        {   
+            _jwtIssuerService = jwtIssuerService;
             _authService = AuthService.GetInstance();
         }
 
@@ -45,9 +47,12 @@ namespace NexusPilot_Auth_Service.Controllers
             {
                 var result = await _authService.SignIn(signInObject.Email, signInObject.Password);
 
-                if(result)
+                if(result.isSuccess)
                 {
-                    return Ok(result);
+                    string jwt = _jwtIssuerService.IssueJWT(signInObject);
+
+                    return Ok(new {token = jwt, email = result.userObject.Email, id = result.userObject.Id });
+
                 } else
                 {
                     return StatusCode(500, "Server Error");
