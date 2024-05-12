@@ -7,6 +7,15 @@ using System.Text;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+//Configuring CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAnyOrigin",
+        builder => builder.AllowAnyOrigin()
+        .AllowAnyMethod()
+        .AllowAnyHeader());
+});
+
 IConfiguration _configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: true, reloadOnChange: true).AddEnvironmentVariables().Build();
 
 var JWTIssuer = _configuration["JWTConfig:Issuer"];
@@ -46,6 +55,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+
+app.UseCors("AllowAnyOrigin");
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

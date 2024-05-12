@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gl46X0TZc1VEka+A5XnQ1VsYgxWxzbQnp/FI6U18N4llqsNFNQg7lNZC7UQoQUy8nuLpKsuBFfX7sx1agpkxrg==",
+  "dgSpecHash": "65TRK+OqghQtH1MK2wYKQ04j9pVzgV3qvx6ihHC1QhtJBbMrr9har1Ma4LPPfYLL0PnoAAxLGRuYVv3EFk0zrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Kaloyan\\Desktop\\My Projects and works\\Projects\\PWA-NexusPilot-Task-Manager\\NexusPilot-Authentication-Service\\NexusPilot-Auth-Service\\NexusPilot-Auth-Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kaloyan\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.aspnet.cors\\5.3.0\\microsoft.aspnet.cors.5.3.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.4\\microsoft.aspnetcore.authentication.jwtbearer.8.0.4.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.codecoverage\\17.9.0\\microsoft.codecoverage.17.9.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
@@ -41,5 +42,16 @@
     "C:\\Users\\Kaloyan\\.nuget\\packages\\system.threading.channels\\8.0.0\\system.threading.channels.8.0.0.nupkg.sha512",
     "C:\\Users\\Kaloyan\\.nuget\\packages\\websocket.client\\5.1.1\\websocket.client.5.1.1.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Cors 5.3.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Cors",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
