@@ -25,7 +25,9 @@ var JWTSecretKey = _configuration["JWTConfig:SecretKey"];
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddControllers().AddNewtonsoftJson();
 builder.Services.AddSingleton<JwtIssuerService>();
+builder.Services.AddSingleton<UserService>();
 
 builder.Services.AddAuthentication(x =>
 {

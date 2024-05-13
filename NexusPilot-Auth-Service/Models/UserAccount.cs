@@ -8,13 +8,17 @@ namespace NexusPilot_Auth_Service.Models
     public class UserAccount : BaseModel
     {
         [PrimaryKey("user_unique_key")]
-        public string Id { get; set; }
+        public Guid Id { get; set; }
         [Column("nick_name")]
         public string NickName { get; set; }
         [Column("bio")]
         public string Bio { get; set; }
         [Column("email")]
         public string Email { get; set; }
+
+        [Column("avatarImageUrl")]
+        public string AvatartImageUrl { get; set; }
+
         [Column("accountdeleted")]
         public bool AccountDeleted { get; set; }
         [Column("role")]
